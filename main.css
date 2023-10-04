@@ -96,15 +96,15 @@ button:hover img {
     color: var(--neon-green);
 }
 
-@media (max-width: 428px) {
+@media (max-width: 480px) {
     body {
         display: flex;
         overflow: hidden;
+        justify-content: center;
     }
 
     .main-container {
         width: 90%;
-        margin: 0 auto;
         padding: 25px 45px 50px;
     }
 
