@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--dark-blue);
+}
+
+.main-container {
+    width: 500px;
+    height: 330px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 15px;
+    flex-direction: column;
+    padding: 25px 50px 50px;
+    justify-content: space-between;
+    background-color: var(--dark-grayish-blue);
+}
+
+.main-container p {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--light-cyan);
+}
+
+.main-container .id-advice {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 6px;
+    color: var(--neon-green);
+}
+
+button {
+    left: 50%;
+    top: 100%;
+    border: 0;
+    width: 60px;
+    height: 60px;
+    outline: none;
+    display: grid;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    place-items: center;
+    transform: translate(-50%, -50%);
+    background-color: var(--neon-green);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+
+button img {
+    rotate: 0deg;
+    transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+    box-shadow: var(--neon-green) 0 5px 15px;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+button:hover img {
+    rotate: 360deg;
+    transition: all 0.5s ease-in-out;
+}
+
+.attribution {
+    bottom: 25px;
+    position: absolute;
+    color: var(--light-cyan);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--neon-green);
+}
+
+@media (max-width: 428px) {
+    body {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .main-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px 45px 50px;
+    }
+
+    .main-container p {
+        font-size: 24px;
+    }
+}
